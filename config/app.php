@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         \Spatie\Permission\PermissionServiceProvider::class,
+        \Badzohreh\Media\Providers\MediaServiceProvider::class,
 
         /*
          * Package Service Providers...
