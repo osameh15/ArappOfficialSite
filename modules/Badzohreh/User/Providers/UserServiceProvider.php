@@ -13,6 +13,7 @@ class UserServiceProvider extends ServiceProvider
 //       todo load login components
         $this->loadMigrationsFrom(__DIR__ . './../Database/Migrations');
         $this->loadViewsFrom(__DIR__ . './../Resources/Views', "User");
+        $this->loadJsonTranslationsFrom(__DIR__."./../Resources/Lang");
         Gate::before(function () {
             if (auth()->user()->hasPermissionTo(Permission::SUPER_ADMIN)) return true;
             return null;

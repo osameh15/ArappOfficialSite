@@ -2,6 +2,7 @@
 
 namespace Badzohreh\User\Model;
 
+use Hamcrest\DiagnosingMatcher;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -24,4 +25,17 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    const DIPLOMA_EDUCATION_TYPE = "diploma";
+    const LICENTIATE_EDUCATION_TYPE = "licentiate's degree";
+    const MASTER_EDUCATION_TYPE = "master of Science";
+    const DOCTORATE_EDUCATION_TYPE = "doctorate";
+
+    public static $EDUCATION_TYPES = [
+        self::DIPLOMA_EDUCATION_TYPE,
+        self::LICENTIATE_EDUCATION_TYPE,
+        self::MASTER_EDUCATION_TYPE,
+        self::DOCTORATE_EDUCATION_TYPE
+    ];
+
+
 }

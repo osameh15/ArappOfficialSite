@@ -1,5 +1,6 @@
 <?php
 
+use Badzohreh\User\Model\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,12 +14,10 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-//            todo change enums codes
-
 //            todo add some permissions
 
             $table->string("avatar")->nullable();
-            $table->enum("education",[""])->default(['sikls'])->nullable();
+            $table->enum("education", User::$EDUCATION_TYPES)->nullable();
             $table->text("bio")->nullable();
             $table->timestamp("email_verified_at");
             $table->rememberToken();
