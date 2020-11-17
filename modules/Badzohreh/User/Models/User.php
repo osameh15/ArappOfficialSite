@@ -17,6 +17,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'education',
+        'avatar',
+        'bio',
     ];
     protected $hidden = [
         'password',
@@ -26,7 +29,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
     const DIPLOMA_EDUCATION_TYPE = "diploma";
-    const LICENTIATE_EDUCATION_TYPE = "licentiate's degree";
+    const LICENTIATE_EDUCATION_TYPE = "licentiate degree";
     const MASTER_EDUCATION_TYPE = "master of Science";
     const DOCTORATE_EDUCATION_TYPE = "doctorate";
 

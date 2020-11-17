@@ -16,9 +16,7 @@ class UserController extends Controller
 
     public function updateUser(UpdateUserRequest $request, UserRepo $userRepo)
     {
-        $user_id = auth()->id();
-        if ($userRepo->update($user_id, $request)) {
-
+        if ($userRepo->update(auth()->id(), $request)) {
             newFeedBacks("عملیات موفقیت آمیز", "ویرایش با موفقیت انجام شد.", "success");
         } else {
             newFeedBacks("عملیات ناموفق", "در ویرایش کاربر خطایی به وجود امده است.", "error");

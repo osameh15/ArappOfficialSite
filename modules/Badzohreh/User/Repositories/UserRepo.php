@@ -14,12 +14,13 @@ class UserRepo
 
     }
 
-    public function update($id, UpdateUserRequest $request)
+    public function update($user_id, UpdateUserRequest $request)
     {
 //        todo add password update
-        return $this->findById($id)->update([
+        return User::query()->find(auth()->id())->update([
             "name" => $request->name,
             "email" => $request->email,
+            "mobile" => $request->mobile,
             "education" => $request->education,
             "bio" => $request->bio,
         ]);

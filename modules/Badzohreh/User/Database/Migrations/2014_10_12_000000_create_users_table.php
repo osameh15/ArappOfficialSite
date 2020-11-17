@@ -12,10 +12,9 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+//            todo add column mobile
             $table->string('email')->unique();
             $table->string('password');
-//            todo add some permissions
-
             $table->string("avatar")->nullable();
             $table->enum("education", User::$EDUCATION_TYPES)->nullable();
             $table->text("bio")->nullable();
