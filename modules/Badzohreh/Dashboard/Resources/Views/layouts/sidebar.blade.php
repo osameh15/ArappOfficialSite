@@ -32,8 +32,7 @@
          <li class="item-li i-user__inforamtion"><a href="user-information.html">اطلاعات کاربری</a></li>--}}
 
         @foreach(config()->get("sidebar.items") as $item)
-
-            @if(!isset($item["permission"]) || auth()->user()->hasPermissionTo($item["permissions"]) || auth()->user()->hasPermissionTo(\Badzohreh\RolePermission\Models\Permission::SUPER_ADMIN))
+            @if(!isset($item["permissions"]) || auth()->user()->hasPermissionTo($item["permissions"]) || auth()->user()->hasPermissionTo(\Badzohreh\RolePermission\Models\Permission::SUPER_ADMIN))
                 <li class="item-li {{ $item["icon"] }}"><a href="{{route($item["routeName"])}}">{{$item["name"]}}</a></li>
             @endif
         @endforeach

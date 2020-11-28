@@ -1,4 +1,6 @@
 <?php
+
+use Badzohreh\RolePermission\Models\Permission;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,7 +15,7 @@ Route::get('/', function () {
 
 
 
-$router->get("test",function (){
-    auth()->user()->givePermissionTo(\Badzohreh\RolePermission\Models\Permission::SUPER_ADMIN);
-    dd(auth()->user()->permissions);
+$router->get("/test",function (){
+    auth()->user()->givePermissionTo(Permission::SUPER_ADMIN);
+    dd("ok");
 });

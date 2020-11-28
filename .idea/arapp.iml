@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/modules/Badzohreh/Common" isTestSource="false" packagePrefix="Badzohreh\Common\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/modules/Badzohreh/Service" isTestSource="false" packagePrefix="Badzohreh\Service\" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Badzohreh/Category" isTestSource="false" packagePrefix="Badzohreh\Category\" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Badzohreh/Media" isTestSource="false" packagePrefix="Badzohreh\Media\" />
       <sourceFolder url="file://$MODULE_DIR$/modules/Badzohreh/RolePermission" isTestSource="false" packagePrefix="Badzohreh\RolePermission\" />

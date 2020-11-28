@@ -17,13 +17,15 @@ class UserRepo
     public function update($user_id, UpdateUserRequest $request)
     {
 //        todo add password update
-        return User::query()->find(auth()->id())->update([
+        return User::query()->find($user_id)->update([
             "name" => $request->name,
             "email" => $request->email,
             "mobile" => $request->mobile,
             "education" => $request->education,
             "bio" => $request->bio,
         ]);
+
+
 
     }
 

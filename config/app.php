@@ -182,6 +182,7 @@ return [
         \Badzohreh\Dashboard\Providers\DashboardServiceProvider::class,
         \Badzohreh\Category\Providers\CategoryServiceProvider::class,
         \Badzohreh\Common\Providers\CommonServiceProvider::class,
+        \Badzohreh\Service\Providers\ServiceServiceProvider::class,
 
     ],
 

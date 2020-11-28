@@ -43,6 +43,7 @@
             "Badzohreh\\RolePermission\\": "modules/Badzohreh/RolePermission/",
             "Badzohreh\\Common\\": "modules/Badzohreh/Common/",
             "Badzohreh\\Media\\": "modules/Badzohreh/Media/",
+            "Badzohreh\\Service\\": "modules/Badzohreh/Service/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
